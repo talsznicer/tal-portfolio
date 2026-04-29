@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Navbar } from "@/components/Navbar";
 import { CaseStudyContent } from "@/components/CaseStudyContent";
-import { caseStudies } from "@/lib/case-studies";
+import { caseStudies } from "@/lib/timeline";
 
 export function generateStaticParams() {
   return caseStudies.map((cs) => ({ project: cs.slug }));

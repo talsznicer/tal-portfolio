@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
-import { caseStudies } from "@/lib/case-studies";
+import { caseStudies } from "@/lib/timeline";
 
 export default function WorkPage() {
   const featured = caseStudies.filter((cs) => cs.featured);
@@ -17,7 +17,7 @@ export default function WorkPage() {
               className="block aspect-[4/3] p-6 bg-white"
             >
               <div className="text-xs uppercase tracking-widest">{cs.date}</div>
-              <div className="text-2xl font-bold mt-2">{cs.project}</div>
+              <div className="text-2xl font-bold mt-2">{cs.name}</div>
             </Link>
           ))}
           <div className="aspect-[4/3] p-6 bg-white opacity-50">

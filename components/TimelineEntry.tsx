@@ -1,6 +1,6 @@
 import { TimelineLabel } from "./TimelineLabel";
 
-export function Section({
+export function TimelineEntry({
   date,
   title,
   bg,

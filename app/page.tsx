@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
-import { Section } from "@/components/Section";
+import { TimelineEntry } from "@/components/TimelineEntry";
 
 export default function Home() {
   return (
@@ -21,30 +21,30 @@ export default function Home() {
             className="pointer-events-none absolute top-0 bottom-0 left-[184px] w-px bg-black"
           />
 
-          <Section date="Jul 2024" title="Elements" bg="#ffd6cc">
+          <TimelineEntry date="Jul 2024" title="Elements" bg="#ffd6cc">
             <h2 className="text-4xl font-bold mb-6">
               Finding the abstraction under the sprawl.
             </h2>
             <Link href="/elements" className="underline">
               Read case study ↗
             </Link>
-          </Section>
+          </TimelineEntry>
 
-          <Section date="Mar 2024" title="Gen Space" bg="#cce0ff">
+          <TimelineEntry date="Mar 2024" title="Gen Space" bg="#cce0ff">
             <h2 className="text-4xl font-bold mb-6">
               A creative canvas for generative work.
             </h2>
             <Link href="/gen-space" className="underline">
               Read case study ↗
             </Link>
-          </Section>
+          </TimelineEntry>
 
-          <Section date="2023" title="Earlier work" bg="#d4ffcc">
+          <TimelineEntry date="2023" title="Earlier work" bg="#d4ffcc">
             <h2 className="text-4xl font-bold mb-6">
               Earlier work — placeholder.
             </h2>
             <p>No case study yet.</p>
-          </Section>
+          </TimelineEntry>
         </div>
 
         <footer className="px-6 py-24 text-sm">

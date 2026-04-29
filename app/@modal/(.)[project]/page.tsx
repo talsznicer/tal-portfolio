@@ -1,6 +1,6 @@
 import { Overlay } from "@/components/Overlay";
 import { CaseStudyContent } from "@/components/CaseStudyContent";
-import { getCaseStudy } from "@/lib/case-studies";
+import { getCaseStudy } from "@/lib/timeline";
 
 export default async function CaseStudyOverlay({
   params,
