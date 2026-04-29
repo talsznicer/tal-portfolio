@@ -24,7 +24,11 @@ Use these terms consistently in conversation and in code (variable names, compon
 
 **Why "moment" and not "project":** the user-facing difference between the two kinds of timeline entry is whether there's a "Read more" — that's also the lexicon split. "Moment" fits the editorial-brutalist vibe and is broad enough to cover photos, talks, small wins, trips, etc.
 
-**Code state vs lexicon (mismatches still to clean up):**
-- `lib/case-studies.ts` currently models only case studies; needs to become a timeline-entry data model with two kinds (case study and moment).
-- MDX frontmatter currently has a `project: "Elements"` field; "project" is no longer a lexicon term, so this field will want renaming.
-- Component naming should follow the lexicon (e.g. `<TimelineEntry>` as the umbrella, case-study and moment variants).
+# Adding a case study
+
+When you add a new case study, you must touch **two** places — miss either one and routing breaks:
+
+1. **Add the entry to `lib/timeline.ts`** with `kind: "case-study"`, a unique `slug`, `name`, and `date`. This makes the standalone `/<slug>` route work and (if `featured: true`) puts it in the Selected Work grid.
+2. **Create an intercept folder at `app/@modal/(.)<slug>/page.tsx`** that renders `<Overlay><CaseStudyContent slug="<slug>" /></Overlay>`. Without this, clicking the timeline link or the work card will navigate the URL but won't open the overlay.
+
+**Why explicit per-slug folders, not a dynamic `(.)[project]`:** Next.js intercepting routes can't be conditionally constrained, so a dynamic intercept greedily matches every single-segment URL — including `/work` and `/cv` — and silently breaks navigation to those pages. Two near-identical files per case study is the price for working navigation. See commit `0f481fd` for the full reasoning.
