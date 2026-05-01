@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Navbar } from "@/components/Navbar";
 import { CaseStudyContent } from "@/components/CaseStudyContent";
@@ -19,11 +18,6 @@ export default async function CaseStudyPage({
   return (
     <>
       <Navbar />
-      <div className="px-6 pt-6">
-        <Link href="/" className="underline text-sm">
-          ← Back
-        </Link>
-      </div>
       <CaseStudyContent slug={project} />
     </>
   );

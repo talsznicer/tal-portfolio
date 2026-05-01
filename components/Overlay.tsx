@@ -35,7 +35,7 @@ export function Overlay({ children }: { children: React.ReactNode }) {
                 <Dialog.Close asChild>
                   <button
                     aria-label="Close"
-                    className="sticky top-4 float-right mr-4 mt-4 text-2xl leading-none"
+                    className="absolute top-4 right-4 z-10 text-2xl leading-none text-white mix-blend-difference"
                   >
                     ×
                   </button>
