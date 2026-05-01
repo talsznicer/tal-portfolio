@@ -21,7 +21,7 @@ export default function Home() {
         <div className="relative">
           <div
             aria-hidden
-            className="pointer-events-none absolute top-24 bottom-0 left-4 w-px bg-black"
+            className="pointer-events-none absolute top-24 bottom-0 left-3 w-px bg-black"
           />
 
           {sortedTimelineEntries.map((entry) => (

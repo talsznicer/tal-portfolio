@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-40 h-16 bg-[#f3f3f1] flex items-center justify-between px-6">
+    <header className="sticky top-0 z-40 h-16 flex items-center justify-between px-6">
       <Link href="/" className="font-bold tracking-tight">
         Tal Sznicer
       </Link>
