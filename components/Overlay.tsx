@@ -32,14 +32,16 @@ export function Overlay({ children }: { children: React.ReactNode }) {
                 className="fixed top-8 right-0 bottom-0 z-50 w-full md:w-[80%] bg-[#f3f3f1] overflow-y-auto"
               >
                 <Dialog.Title className="sr-only">Overlay</Dialog.Title>
-                <Dialog.Close asChild>
-                  <button
-                    aria-label="Close"
-                    className="absolute top-4 right-4 z-10 text-2xl leading-none text-white mix-blend-difference"
-                  >
-                    ×
-                  </button>
-                </Dialog.Close>
+                <div className="sticky top-0 z-10 h-0 pointer-events-none">
+                  <Dialog.Close asChild>
+                    <button
+                      aria-label="Close"
+                      className="absolute top-4 right-4 text-2xl leading-none text-black pointer-events-auto"
+                    >
+                      ×
+                    </button>
+                  </Dialog.Close>
+                </div>
                 {children}
               </motion.div>
             </Dialog.Content>

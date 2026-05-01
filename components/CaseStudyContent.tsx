@@ -26,7 +26,7 @@ function ElementsTemplate() {
     <article>
       <section className="bg-black">
         <video
-          src="/timeline/vid-07.mp4"
+          src="/timeline/vid-03.mp4"
           autoPlay
           muted
           loop
