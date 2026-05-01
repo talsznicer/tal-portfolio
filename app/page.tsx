@@ -9,9 +9,12 @@ export default function Home() {
       <main>
         <section className="px-6 pt-16 pb-32 max-w-4xl">
           <p className="text-2xl leading-snug">
-            Placeholder intro. Tal Sznicer is a product designer based in
-            [city]. About copy lives at the top of the homepage and is read
-            on first scroll.
+            I&rsquo;m Tal, a product designer based in London. I lead design
+            at LTX Studio, an AI filmmaking platform by Lightricks, where I
+            work on creative tools, design systems. I like to build, not just
+            design, sketching ideas in code, prototyping with AI, and getting
+            close enough to the material to know what&rsquo;s actually
+            possible.
           </p>
         </section>
 
