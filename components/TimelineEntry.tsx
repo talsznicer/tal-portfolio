@@ -14,7 +14,12 @@ export function TimelineEntry({ entry }: { entry: Entry }) {
 
   return (
     <section className="relative grid grid-cols-[160px_1fr] gap-8 px-6 py-24 min-h-[140vh]">
-      <TimelineLabel date={date} title={label} />
+      <TimelineLabel
+        date={date}
+        title={label}
+        isCaseStudy={entry.kind === "case-study"}
+        href={entry.kind === "case-study" ? `/${entry.slug}` : undefined}
+      />
       <div className="space-y-10 max-w-2xl">
         {headline && (
           <h2 className="text-3xl font-bold leading-tight">{headline}</h2>
