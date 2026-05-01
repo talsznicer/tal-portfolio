@@ -18,19 +18,12 @@ export default function Home() {
           </p>
         </section>
 
-        <div className="relative">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute top-24 bottom-0 left-3 w-px bg-black"
+        {sortedTimelineEntries.map((entry) => (
+          <TimelineEntry
+            key={entry.kind === "case-study" ? entry.slug : entry.id}
+            entry={entry}
           />
-
-          {sortedTimelineEntries.map((entry) => (
-            <TimelineEntry
-              key={entry.kind === "case-study" ? entry.slug : entry.id}
-              entry={entry}
-            />
-          ))}
-        </div>
+        ))}
 
         <footer className="px-6 py-24 text-sm">
           End of timeline — placeholder footer.
