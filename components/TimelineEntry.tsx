@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { TimelineLabel } from "./TimelineLabel";
 import {
@@ -30,11 +29,6 @@ export function TimelineEntry({ entry }: { entry: Entry }) {
               <Media key={`${entry.kind}-${i}`} item={m} />
             ))}
           </div>
-        )}
-        {entry.kind === "case-study" && (
-          <Link href={`/${entry.slug}`} className="underline text-sm">
-            Read case study ↗
-          </Link>
         )}
       </div>
     </section>
